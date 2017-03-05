@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Mansour H. Alkmim</title>
+    <link>https://mansouralkmim.github.io/project/index.xml</link>
+    <description>Recent content in Projects on Mansour H. Alkmim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Mansour H. Alkmim</copyright>
+    <lastBuildDate>Sat, 04 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Boundary Element</title>
+      <link>https://mansouralkmim.github.io/project/BoundaryELement/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mansouralkmim.github.io/project/BoundaryELement/</guid>
+      <description>&lt;p&gt;This is computer program to solve heat conduction in 3D solids through Boundary Element method.&lt;/p&gt;
+
+&lt;p&gt;The main solver is done in c++ using the fast multipole method by Dr. Yijun Liu. Pre and pos processing are done in Python3/GMSH.&lt;/p&gt;
+
+&lt;p&gt;The program can be found &lt;a href=&#34;https://github.com/MansourAlkmim/bem3d&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Mansour H. Alkmim</title>
+    <link>https://mansouralkmim.github.io/post/index.xml</link>
+    <description>Recent content in Posts on Mansour H. Alkmim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Mansour H. Alkmim</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First Post</title>
+      <link>https://mansouralkmim.github.io/post/first-post/</link>
+      <pubDate>Sat, 04 Mar 2017 10:00:00 +0000</pubDate>
+      
+      <guid>https://mansouralkmim.github.io/post/first-post/</guid>
+      <description>&lt;p&gt;This is the first post.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
