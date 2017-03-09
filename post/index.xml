@@ -11,12 +11,58 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>First Post</title>
+      <title>First Post: how do I create this site in 30 minutes</title>
       <link>https://mansouralkmim.github.io/post/first-post/</link>
       <pubDate>Sat, 04 Mar 2017 10:00:00 +0000</pubDate>
       
       <guid>https://mansouralkmim.github.io/post/first-post/</guid>
-      <description>&lt;p&gt;This is the first post.&lt;/p&gt;
+      <description>&lt;p&gt;Hi, this first post I show you how I created this website.&lt;/p&gt;
+
+&lt;p&gt;You do not need any knowledge in PHP or CSS. You do need to know a little of windows terminal, and git.&lt;/p&gt;
+
+&lt;p&gt;First, download &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The second and last step is follow this &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Top Youtube Channels</title>
+      <link>https://mansouralkmim.github.io/post/top-youtube/</link>
+      <pubDate>Sat, 04 Mar 2017 10:00:00 +0000</pubDate>
+      
+      <guid>https://mansouralkmim.github.io/post/top-youtube/</guid>
+      <description>&lt;p&gt;Those are my current favorite Youtube channels.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/user/Munchies&#34; target=&#34;_blank&#34;&gt;Munchies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Munchies is not your usual food channel show, they do it raw and do it better. The amount of series they have is also impressive. My favorites are Chef&amp;rsquo;s Night Out and Action Bronson&amp;rsquo;s fuck that&amp;rsquo;s delicious.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rZWTjSUDG48&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/rZWTjSUDG48/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/user/everyframeapainting/featured&#34; target=&#34;_blank&#34;&gt;Every frame of painting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This channel explain the technicality of movies. His analysis are very convince and he puts a lot of effort to make his point in why and how great movies are made.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=I8lQKLjmoWI&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/I8lQKLjmoWI/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/user/kirstendirksen&#34; target=&#34;_blank&#34;&gt;Kirsten Dirksen&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a relatively small channel not well known. Kirsten Dirksen and her family travel the world visiting interesting homes along the way. She does a great job showing their house and the building process.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=BqnJvY8IXjg&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/BqnJvY8IXjg/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/user/GaryVaynerchuk&#34; target=&#34;_blank&#34;&gt;Gary Vaynerchuk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Gary Vaynerchuk is an entrepreneur in a social media business. His vlogs are a modern version of Mad Men era. He has a great team who produces daily content that gives life and business advices.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=HwXsFPZp3fQ&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/HwXsFPZp3fQ/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/user/Vsauce2&#34; target=&#34;_blank&#34;&gt;Vsauce2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This might be my favorite channel on YouTube channel. Vsauce2 highlights what is going on in the top-notch level of scientific research around the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6grLJyqIM8E&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/6grLJyqIM8E/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
