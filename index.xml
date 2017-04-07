@@ -11,6 +11,87 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TikZ format and subimitting papers</title>
+      <link>https://mansouralkmim.github.io/post/tikz/</link>
+      <pubDate>Thu, 06 Apr 2017 10:00:00 +0000</pubDate>
+      
+      <guid>https://mansouralkmim.github.io/post/tikz/</guid>
+      <description>
+
+&lt;p&gt;Normally, the procedure of including figures consist of generating a .Fig from your programing language, generating a .eps or .pdf and then including it in your TeX. There is two essential problems with this scheme. The first one is that if you have to make small changes in the plot, you need to go back to your .Fig file and regenerate the output format again. The second problem comes from the type font utilized in the plot. If the plot aspect ratio is changed, chances are the font is also going to change.&lt;/p&gt;
+
+&lt;p&gt;A solution for this problem is using the package TikZ. TikZ is a TeX package for creating graphics. If you happen to use MatLab as your programming language to generate your plots a very useful &lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; can be use to generate your plot in the TikZ format by invoking:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;matlab2tikz(&#39;figure.tikz&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The following commands are needed in the LaTeX file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{patchplots}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And in the document itself:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\begin{figure}[!h]
+    \subfloat[\label{fig:figure1}]{%
+        \input{fig/figure1.tikz}
+    }
+    \hfill
+    \subfloat[\label{fig:figure2}]{%
+        \input{fig/figure2.tikz}
+    }
+    \caption{This is the caption.}
+    \label{fig:label}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, I had some problems with large size images. MikTeX has a limit of memory usage, and for some heavy TikZ files this limit can cause errors. The follow &lt;a href=&#34;https://github.com/matlab2tikz/matlab2tikz/wiki/TeX-capacity-exceeded,-sorry&#34; target=&#34;_blank&#34;&gt;procedure&lt;/a&gt; can be use to extend memory limits in MikTeX.&lt;/p&gt;
+
+&lt;p&gt;In Windows prompt, write:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;initexmf --edit-config-file=pdflatex
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An editor will open, then write the following lines and save it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;main_memory=6000000 
+extra_mem_bot=3000000 
+font_mem_size=3000000 
+pool_size=3000000 
+buf_size=3000000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Afterwards call &lt;code&gt;initexmf --dump=pdflatex&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;subimitting-a-paper-to-journals&#34;&gt;Subimitting a paper to journals&lt;/h1&gt;
+
+&lt;p&gt;After your paper is done and you are happy with your high quality images you decide to submit your paper for publication. The problem is that many journals do not accept the TikZ format (yet?). Two options arises. Go back to square one and redo all images the old fashion way. Or like I did, do research for a whole day to find a workaround method.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is a neat way of converting your TikZ images to pdf maintaining the quality. The method consist of using the external library.&lt;/p&gt;
+
+&lt;p&gt;Add the following lines to you TeX file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-latex&#34;&gt;\usetikzlibrary{external} %this one export the plot as a pdf
+\tikzexternalize[prefix=figures/] %to this path
+\tikzexternalize % activate the external library
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Externalization relies on &amp;lsquo;shell escape&amp;rsquo;. When this is restricted or disabled, sometimes externalization can&amp;rsquo;t work because it requires the compiler to spawn additional compilation commands in order to create each picture separately.
+By default, this feature is disabled for security reasons. A restricted set of commands may be spawned, but this set is not sufficient for the compilation of the pictures.
+Hence, you need to override the default setting by explicitly allowing unrestricted shell escape for the compilation. In TeXstudio configuration -&amp;gt; command tab look for the pdflatex line and add to the end:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-shell-escape
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mansour.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An overview of AlphaGo and Artificial Intelligence</title>
       <link>https://mansouralkmim.github.io/post/go/</link>
       <pubDate>Sat, 01 Apr 2017 10:00:00 +0000</pubDate>
@@ -39,8 +120,7 @@ prophecy.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://MansourAlkmim.github.io/img/goarticle/0.png&#34; alt=&#34;A Go board during a game&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The game is played in a rectangular board as shown in Figure
-[fig:board]. Black and white stones have to be place in the
+&lt;p&gt;The game is played in a rectangular board as shown in the above Figure. Black and white stones have to be place in the
 intersected line. If the opponents stones surround a stone, the
 surrounded stone loses its liberty and it is said to be captured. During
 the game, players can connect stones to create groups and expand
@@ -86,8 +166,7 @@ computing program, there is no easy way to evaluate stones position.&lt;/p&gt;&l
 succeed in the past. The traditional way of making a computer program
 had to change.&lt;/p&gt;
 
-&lt;p&gt;A different paradigm was used in AlphaGo to tackle the problem
-[@silver2016mastering]. AlphaGo utilizes a more direct approach in a
+&lt;p&gt;A different paradigm was used in AlphaGo to tackle the problem. AlphaGo utilizes a more direct approach in a
 sense that instead of using strict instruction it uses Deep Learning
 where the machine play itself millions of games so it can have a better
 understand of the game.&lt;/p&gt;
@@ -96,11 +175,8 @@ understand of the game.&lt;/p&gt;
 principles. Discuss why AlphaGoâ€™s algorithm is successful comparing with
 older methods and create some conjectures about the future of AI and new
 challenges. This arcticle is strucutred as follow: first, the subject of
-artificial intelligence is introduce in Section [sec:ai] followed by a
-description of some concept used by AlphaGO. Next, in section
-[sec:alpha], AlphaGO architecture is discussed and in Section [conj]
-some conjectures about AlphaGO future and AI are discussed. Finally,
-Section [sec:conclusion] presents a conclusion.&lt;/p&gt;
+artificial intelligence is introduce followed by a
+description of some concept used by AlphaGO. Next, AlphaGO architecture is discussed and some conjectures about AlphaGO future and AI are discussed. Finally, conclusion is made.&lt;/p&gt;
 
 &lt;h1 id=&#34;artificial-intelligence&#34;&gt;Artificial Intelligence&lt;/h1&gt;
 
@@ -112,7 +188,7 @@ computational techniques and it can in fact execute specific tasks
 better than ourselves, although it still needs human intervention to
 implement, â€œtrain&amp;rdquo;, collect and provide external data. Computer program
 using AI methods are indeed data-driven that learn from input and output
-data presented to them [@shahin2016state]. This is in opposition to
+data presented to them. This is in opposition to
 physically-based models that use physical laws to derive underlying
 relationships in the system and require prior information and initial
 conditions.&lt;/p&gt;
@@ -140,7 +216,7 @@ action to take, but instead it must discover which actions yield the
 most reward. Reinforcement learning has to store values for each state
 in order to select the best action that will maximize the reward in the
 long term. this task has shown to be too memory expensive and in some
-cases infeasible [@sutton1998reinforcement]. For complex problems, an
+cases infeasible. For complex problems, an
 approximation techniques such as decision trees or neural networks are
 more suitable.&lt;/p&gt;
 
@@ -182,7 +258,7 @@ is divided in two stage. When state in represented in the search tree, a
 tree policy is used to select the corresponding action otherwise, a
 default policy is used to roll out simulations to completion. For the
 simplest version of the MCTS called &lt;em&gt;greedy&lt;/em&gt;, it selects the action with
-high value in the first stage [@gelly2011monte]. In other words, the
+high value in the first stage. In other words, the
 simulation phase consist of move randomly to the next branching state
 and keeping the statistics. Once many simulations have been completed,
 the algorithm can move to the best overall result and return the
@@ -202,7 +278,7 @@ exponential in the horizon.&lt;/p&gt;
 influence the choice of moves. Certain patters of plays can increase the
 probability of moving in to a specific region. Techniques can be used to
 decrease time in the exploratory phase by employing rapid action value
-estimation (RAVE) [@gelly2011monte]. Currently, some of the main Go
+estimation (RAVE). Currently, some of the main Go
 programs use this method to achieve amateur levels of play. AlphaGO
 manages to go beyond that by using extensively the concepts of machine
 learning such as neural networks and at the same time avoiding using
@@ -225,7 +301,7 @@ range from completely true to completely false. Evolutionary computation
 are algorithms inspired in biological evolution that mens they are based
 on population-based trial and error problem solvers.&lt;/p&gt;
 
-&lt;p&gt;Figure [fig:nn] shows a diagram of a node trying to exemplify a neuron
+&lt;p&gt;The Figure bellow shows a diagram of a node trying to exemplify a neuron
 in a human brain. A neuron is where the computation happens, information
 is allocated and transmitted based on a series of factor and when it
 encounters sufficient stimulus. A neural network consist of many nodes
@@ -284,7 +360,7 @@ to the next layer. An algorithm can have as many layers as necessary
 before providing a output result and each layer uses data output from
 the previous layer forming a cascade of nonlinear processing units. DL
 can be based on unsupervised or supervised learning of multiples levels
-of data representation [@lecun2015deep].&lt;/p&gt;
+of data representation.&lt;/p&gt;
 
 &lt;h1 id=&#34;alphago-architecture&#34;&gt;AlphaGo architecture&lt;/h1&gt;
 
@@ -516,6 +592,20 @@ same paper important concept as well as some explanation and
 clarification of the many concepts in a easy way to understand. Also my
 opinions and conjectures from the many researched and media articles
 about the subject were given.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;S. Library. (2016) Rules of go - introductory. [Online]. Available: &lt;a href=&#34;http://senseis.xmp.net/?BasicRulesOfGo&#34; target=&#34;_blank&#34;&gt;http://senseis.xmp.net/?BasicRulesOfGo&lt;/a&gt;
+2.L. V. Allis et al., Searching for solutions in games and artificial intelligence. Ponsen &amp;amp; Looijen, 1994.&lt;/li&gt;
+&lt;li&gt;D. Silver, A. Huang, C. J. Maddison, A. Guez, L. Sifre, G. Van Den Driessche, J. Schrittwieser, I. Antonoglou, V. Panneershelvam, M. Lanctot et al., Mastering the game of go with deep neural networks and tree search, Nature, vol. 529, no. 7587, pp. 484-–489, 2016.&lt;/li&gt;
+&lt;li&gt;M. A. Shahin, State-of-the-art review of some artificial intelligenceapplications in pile foundations, Geoscience Frontiers, vol. 7, no. 1, pp. 33–44, 2016.&lt;/li&gt;
+&lt;li&gt;R. S. Sutton and A. G. Barto, Reinforcement learning: An introduction. MIT press Cambridge, 1998, vol. 1, no. 1.&lt;/li&gt;
+&lt;li&gt;G. Chaslot, J.-T. Saito, B. Bouzy, J. Uiterwijk, and H. J. Van Den Herik, Monte-carlo strategies for computer go, in Proceedings of the 18th BeNeLux Conference on Artificial Intelligence, Namur, Belgium, 2006, pp. 83&amp;ndash;91.&lt;/li&gt;
+&lt;li&gt;S. Gelly and D. Silver, Monte-carlo tree search and rapid action value estimation in computer go, Artificial Intelligence, vol. 175, no. 11, pp.1856&amp;ndash;1875, 2011.&lt;/li&gt;
+&lt;li&gt;Y. LeCun, Y. Bengio, and G. Hinton, Deep learning, Nature, vol. 521, no. 7553, pp. 436&amp;ndash;444, 2015.&lt;/li&gt;
+&lt;li&gt;Deeplearning4j. (2017) Introduction to deep neural networks. [Online]. Available: &lt;a href=&#34;https://deeplearning4j.org/neuralnet-overview.html&#34; target=&#34;_blank&#34;&gt;https://deeplearning4j.org/neuralnet-overview.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     

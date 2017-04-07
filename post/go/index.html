@@ -224,8 +224,7 @@ prophecy.</p>
 
 <p><img src="/img/goarticle/0.png" alt="A Go board during a game" /></p>
 
-<p>The game is played in a rectangular board as shown in Figure
-[fig:board]. Black and white stones have to be place in the
+<p>The game is played in a rectangular board as shown in the above Figure. Black and white stones have to be place in the
 intersected line. If the opponents stones surround a stone, the
 surrounded stone loses its liberty and it is said to be captured. During
 the game, players can connect stones to create groups and expand
@@ -271,8 +270,7 @@ computing program, there is no easy way to evaluate stones position.</p></li>
 succeed in the past. The traditional way of making a computer program
 had to change.</p>
 
-<p>A different paradigm was used in AlphaGo to tackle the problem
-[@silver2016mastering]. AlphaGo utilizes a more direct approach in a
+<p>A different paradigm was used in AlphaGo to tackle the problem. AlphaGo utilizes a more direct approach in a
 sense that instead of using strict instruction it uses Deep Learning
 where the machine play itself millions of games so it can have a better
 understand of the game.</p>
@@ -281,11 +279,8 @@ understand of the game.</p>
 principles. Discuss why AlphaGoâ€™s algorithm is successful comparing with
 older methods and create some conjectures about the future of AI and new
 challenges. This arcticle is strucutred as follow: first, the subject of
-artificial intelligence is introduce in Section [sec:ai] followed by a
-description of some concept used by AlphaGO. Next, in section
-[sec:alpha], AlphaGO architecture is discussed and in Section [conj]
-some conjectures about AlphaGO future and AI are discussed. Finally,
-Section [sec:conclusion] presents a conclusion.</p>
+artificial intelligence is introduce followed by a
+description of some concept used by AlphaGO. Next, AlphaGO architecture is discussed and some conjectures about AlphaGO future and AI are discussed. Finally, conclusion is made.</p>
 
 <h1 id="artificial-intelligence">Artificial Intelligence</h1>
 
@@ -297,7 +292,7 @@ computational techniques and it can in fact execute specific tasks
 better than ourselves, although it still needs human intervention to
 implement, â€œtrain&rdquo;, collect and provide external data. Computer program
 using AI methods are indeed data-driven that learn from input and output
-data presented to them [@shahin2016state]. This is in opposition to
+data presented to them. This is in opposition to
 physically-based models that use physical laws to derive underlying
 relationships in the system and require prior information and initial
 conditions.</p>
@@ -325,7 +320,7 @@ action to take, but instead it must discover which actions yield the
 most reward. Reinforcement learning has to store values for each state
 in order to select the best action that will maximize the reward in the
 long term. this task has shown to be too memory expensive and in some
-cases infeasible [@sutton1998reinforcement]. For complex problems, an
+cases infeasible. For complex problems, an
 approximation techniques such as decision trees or neural networks are
 more suitable.</p>
 
@@ -367,7 +362,7 @@ is divided in two stage. When state in represented in the search tree, a
 tree policy is used to select the corresponding action otherwise, a
 default policy is used to roll out simulations to completion. For the
 simplest version of the MCTS called <em>greedy</em>, it selects the action with
-high value in the first stage [@gelly2011monte]. In other words, the
+high value in the first stage. In other words, the
 simulation phase consist of move randomly to the next branching state
 and keeping the statistics. Once many simulations have been completed,
 the algorithm can move to the best overall result and return the
@@ -387,7 +382,7 @@ exponential in the horizon.</p>
 influence the choice of moves. Certain patters of plays can increase the
 probability of moving in to a specific region. Techniques can be used to
 decrease time in the exploratory phase by employing rapid action value
-estimation (RAVE) [@gelly2011monte]. Currently, some of the main Go
+estimation (RAVE). Currently, some of the main Go
 programs use this method to achieve amateur levels of play. AlphaGO
 manages to go beyond that by using extensively the concepts of machine
 learning such as neural networks and at the same time avoiding using
@@ -410,7 +405,7 @@ range from completely true to completely false. Evolutionary computation
 are algorithms inspired in biological evolution that mens they are based
 on population-based trial and error problem solvers.</p>
 
-<p>Figure [fig:nn] shows a diagram of a node trying to exemplify a neuron
+<p>The Figure bellow shows a diagram of a node trying to exemplify a neuron
 in a human brain. A neuron is where the computation happens, information
 is allocated and transmitted based on a series of factor and when it
 encounters sufficient stimulus. A neural network consist of many nodes
@@ -469,7 +464,7 @@ to the next layer. An algorithm can have as many layers as necessary
 before providing a output result and each layer uses data output from
 the previous layer forming a cascade of nonlinear processing units. DL
 can be based on unsupervised or supervised learning of multiples levels
-of data representation [@lecun2015deep].</p>
+of data representation.</p>
 
 <h1 id="alphago-architecture">AlphaGo architecture</h1>
 
@@ -702,6 +697,20 @@ clarification of the many concepts in a easy way to understand. Also my
 opinions and conjectures from the many researched and media articles
 about the subject were given.</p>
 
+<h2 id="references">References</h2>
+
+<ol>
+<li>S. Library. (2016) Rules of go - introductory. [Online]. Available: <a href="http://senseis.xmp.net/?BasicRulesOfGo" target="_blank">http://senseis.xmp.net/?BasicRulesOfGo</a>
+2.L. V. Allis et al., Searching for solutions in games and artificial intelligence. Ponsen &amp; Looijen, 1994.</li>
+<li>D. Silver, A. Huang, C. J. Maddison, A. Guez, L. Sifre, G. Van Den Driessche, J. Schrittwieser, I. Antonoglou, V. Panneershelvam, M. Lanctot et al., Mastering the game of go with deep neural networks and tree search, Nature, vol. 529, no. 7587, pp. 484-–489, 2016.</li>
+<li>M. A. Shahin, State-of-the-art review of some artificial intelligenceapplications in pile foundations, Geoscience Frontiers, vol. 7, no. 1, pp. 33–44, 2016.</li>
+<li>R. S. Sutton and A. G. Barto, Reinforcement learning: An introduction. MIT press Cambridge, 1998, vol. 1, no. 1.</li>
+<li>G. Chaslot, J.-T. Saito, B. Bouzy, J. Uiterwijk, and H. J. Van Den Herik, Monte-carlo strategies for computer go, in Proceedings of the 18th BeNeLux Conference on Artificial Intelligence, Namur, Belgium, 2006, pp. 83&ndash;91.</li>
+<li>S. Gelly and D. Silver, Monte-carlo tree search and rapid action value estimation in computer go, Artificial Intelligence, vol. 175, no. 11, pp.1856&ndash;1875, 2011.</li>
+<li>Y. LeCun, Y. Bengio, and G. Hinton, Deep learning, Nature, vol. 521, no. 7553, pp. 436&ndash;444, 2015.</li>
+<li>Deeplearning4j. (2017) Introduction to deep neural networks. [Online]. Available: <a href="https://deeplearning4j.org/neuralnet-overview.html" target="_blank">https://deeplearning4j.org/neuralnet-overview.html</a></li>
+</ol>
+
     </div>
   </div>
 
@@ -715,6 +724,9 @@ about the subject were given.</p>
       aria-hidden="true">&larr;</span> First Post: how do I create this site in 30 minutes</a></li>
     
 
+    
+    <li class="next"><a href="https://mansouralkmim.github.io/post/tikz/">TikZ format and subimitting papers <span
+      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
